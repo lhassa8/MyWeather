@@ -21,6 +21,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenHills" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-nE-FzZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UI4-Ez-j0S">
                                 <rect key="frame" x="200" y="40" width="200" height="175"/>
@@ -39,208 +42,282 @@
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="48" y="0.0" width="44" height="40"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-ZX-H2u">
                                         <rect key="frame" x="32" y="35" width="76" height="28"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="27" y="40" width="87" height="32"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="188" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-2e-Qps">
                                         <rect key="frame" x="0.0" y="62" width="140" height="66"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="Mde-C8-ncO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="48"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="72" width="140" height="69"/>
+                                        </variation>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="0tD-fu-HKY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0tD-fu-HKY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0tD-fu-HKY"/>
+                                    </mask>
+                                </variation>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2FS-fi-0fX">
-                                <rect key="frame" x="28" y="342" width="544" height="242"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGz-Qv-nrU">
+                                <rect key="frame" x="10" y="319" width="392" height="204"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZyR-Lz-Tjc">
-                                        <rect key="frame" x="127" y="0.0" width="290" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Cloud Cover:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BJ-yb-M0I">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="Y3q-wb-FQK"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZII-uH-fNw">
-                                                <rect key="frame" x="150" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="iTu-rc-iL8"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p1o-tN-4fd">
-                                        <rect key="frame" x="127" y="33" width="290" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wind:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-Am-RFw">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="8MX-VO-GZT"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-PJ-wGD">
-                                                <rect key="frame" x="150" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="Pbk-sg-kgU"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Rzb-ZN-VnV">
-                                        <rect key="frame" x="127" y="65" width="290" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rain in the last 3h:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCe-6G-Xsm">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="KrR-Vl-gZG"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6z4-cJ-Ndl">
-                                                <rect key="frame" x="150" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="UX4-Bj-6un"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZGI-1y-OvW">
-                                        <rect key="frame" x="127" y="98" width="290" height="25"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Humidity:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cg-ae-a2e">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="bPF-wQ-Tgu"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea7-J9-dux">
-                                                <rect key="frame" x="150" y="0.0" width="140" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="140" id="fDp-ti-rim"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82T-lq-b9M">
-                                        <rect key="frame" x="158" y="130" width="229" height="33"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82T-lq-b9M">
+                                        <rect key="frame" x="68" y="20" width="245" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Get Weather For Current Location">
-                                            <color key="titleColor" red="0.86666667461395264" green="0.60392159223556519" blue="0.28235295414924622" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.97245593742051284" green="0.68078454899760044" blue="0.32457272810279003" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="259" height="36"/>
+                                        </variation>
                                         <connections>
                                             <action selector="getWeatherForLocationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4pS-ZX-WGn"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.40000000000000002" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name or Zipcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-St-1Z0">
-                                        <rect key="frame" x="10" y="171" width="524" height="30"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-Mk-TVx">
+                                        <rect key="frame" x="20" y="61" width="352" height="44"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloudCoverWhite" translatesAutoresizingMaskIntoConstraints="NO" id="bAN-8Q-k7Q">
+                                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="9dQ-ot-2sD"/>
+                                                    <constraint firstAttribute="width" constant="30" id="MoH-Ur-AnV"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="9dQ-ot-2sD"/>
+                                                        <exclude reference="MoH-Ur-AnV"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <mask key="constraints">
+                                                        <include reference="9dQ-ot-2sD"/>
+                                                        <include reference="MoH-Ur-AnV"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZII-uH-fNw">
+                                                <rect key="frame" x="58" y="22" width="50" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="iTu-rc-iL8"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="47" y="10" width="29" height="25"/>
+                                                </variation>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="windWhite" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-M8-KT6">
+                                                <rect key="frame" x="140" y="20" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="NHK-fd-5Lo">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                                    </constraint>
+                                                    <constraint firstAttribute="height" constant="30" id="bMF-P3-Xdg"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="NHK-fd-5Lo"/>
+                                                        <exclude reference="bMF-P3-Xdg"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="92" y="7" width="30" height="30"/>
+                                                    <mask key="constraints">
+                                                        <include reference="NHK-fd-5Lo"/>
+                                                        <include reference="bMF-P3-Xdg"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-PJ-wGD">
+                                                <rect key="frame" x="178" y="22" width="60" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Pbk-sg-kgU">
+                                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                                    </constraint>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="139" y="10" width="29" height="25"/>
+                                                </variation>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="humidityWhite" translatesAutoresizingMaskIntoConstraints="NO" id="row-f2-KTv">
+                                                <rect key="frame" x="263" y="22" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="VW1-78-zGg"/>
+                                                    <constraint firstAttribute="height" constant="30" id="mQp-nB-4xp"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="VW1-78-zGg"/>
+                                                        <exclude reference="mQp-nB-4xp"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="184" y="7" width="30" height="30"/>
+                                                    <mask key="constraints">
+                                                        <include reference="VW1-78-zGg"/>
+                                                        <include reference="mQp-nB-4xp"/>
+                                                    </mask>
+                                                </variation>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea7-J9-dux">
+                                                <rect key="frame" x="299" y="25" width="50" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="fDp-ti-rim"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="231" y="10" width="29" height="25"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="nS3-8Z-0BX"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="nS3-8Z-0BX"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="36" width="259" height="44"/>
+                                            <mask key="constraints">
+                                                <include reference="nS3-8Z-0BX"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name or Zipcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-St-1Z0">
+                                        <rect key="frame" x="94" y="113" width="209" height="30"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="80" width="259" height="30"/>
+                                        </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-UV-g6a">
-                                        <rect key="frame" x="170" y="209" width="204" height="33"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-UV-g6a">
+                                        <rect key="frame" x="94" y="151" width="204" height="33"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Get the weather for above city">
-                                            <color key="titleColor" red="0.86666667460000002" green="0.60392159219999997" blue="0.2823529541" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.91764705882352937" green="0.64313725490196083" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="110" width="259" height="36"/>
+                                        </variation>
                                         <connections>
                                             <action selector="getWeatherForCityButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCq-A3-hOe"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="cGp-St-1Z0" firstAttribute="leading" secondItem="2FS-fi-0fX" secondAttribute="leadingMargin" constant="10" id="Bn6-16-i2x"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="cGp-St-1Z0" secondAttribute="trailing" constant="10" id="TlA-NF-0t6"/>
-                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" alignment="fill" axis="vertical" misplaced="YES">
+                                    <rect key="frame" x="53" y="447" width="259" height="146"/>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uGz-Qv-nrU" secondAttribute="bottom" constant="30" id="50X-Ei-5tA"/>
+                            <constraint firstItem="DDr-0p-jvO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DeS-3z-jdp"/>
+                            <constraint firstItem="uGz-Qv-nrU" firstAttribute="top" secondItem="UI4-Ez-j0S" secondAttribute="bottom" constant="50" id="Dm9-j6-daD"/>
+                            <constraint firstItem="aZb-nE-FzZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GJv-L4-sff"/>
                             <constraint firstItem="DDr-0p-jvO" firstAttribute="centerX" secondItem="UI4-Ez-j0S" secondAttribute="centerX" id="Mfd-Aq-oL8"/>
+                            <constraint firstItem="aZb-nE-FzZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mk4-L1-2Tv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UI4-Ez-j0S" secondAttribute="trailing" constant="20" id="TLc-lg-iWL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2FS-fi-0fX" secondAttribute="trailing" constant="8" id="TZJ-94-HNl"/>
+                            <constraint firstAttribute="trailing" secondItem="aZb-nE-FzZ" secondAttribute="trailing" id="Wlb-HO-U7I"/>
                             <constraint firstItem="UI4-Ez-j0S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bwP-YM-UYb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aZb-nE-FzZ" secondAttribute="bottom" id="eOz-wd-jIh"/>
                             <constraint firstItem="UI4-Ez-j0S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hRb-28-OFk"/>
                             <constraint firstItem="UI4-Ez-j0S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hXp-40-mjf"/>
-                            <constraint firstItem="2FS-fi-0fX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="l31-nf-NzV"/>
-                            <constraint firstItem="2FS-fi-0fX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oPZ-DP-Y89"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2FS-fi-0fX" secondAttribute="bottom" constant="20" id="qax-nd-S7v"/>
+                            <constraint firstItem="uGz-Qv-nrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tOE-xv-67M"/>
                             <constraint firstItem="DDr-0p-jvO" firstAttribute="centerY" secondItem="UI4-Ez-j0S" secondAttribute="centerY" id="yeI-nx-e41"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GJv-L4-sff"/>
+                                <exclude reference="Mk4-L1-2Tv"/>
+                                <exclude reference="Wlb-HO-U7I"/>
+                                <exclude reference="DeS-3z-jdp"/>
+                                <exclude reference="Dm9-j6-daD"/>
+                                <exclude reference="tOE-xv-67M"/>
+                                <exclude reference="50X-Ei-5tA"/>
+                                <exclude reference="eOz-wd-jIh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="GJv-L4-sff"/>
+                                <include reference="Mk4-L1-2Tv"/>
+                                <include reference="Wlb-HO-U7I"/>
+                                <include reference="DeS-3z-jdp"/>
+                                <exclude reference="Dm9-j6-daD"/>
+                                <include reference="tOE-xv-67M"/>
+                                <include reference="50X-Ei-5tA"/>
+                                <include reference="eOz-wd-jIh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="d5n-pw-AKx" id="djp-nf-qWu"/>
                         <outlet property="cityTextField" destination="cGp-St-1Z0" id="oYR-O7-GD3"/>
+                        <outlet property="cloudCoverIcon" destination="bAN-8Q-k7Q" id="t7q-SU-oAf"/>
                         <outlet property="cloudCoverLabel" destination="ZII-uH-fNw" id="Nk9-cW-vg5"/>
-                        <outlet property="cloudCoverName" destination="5BJ-yb-M0I" id="phm-it-fJD"/>
                         <outlet property="getCityWeatherButton" destination="Lsi-UV-g6a" id="6dv-St-AKZ"/>
                         <outlet property="getLocationWeatherButton" destination="82T-lq-b9M" id="csn-Yv-YT5"/>
+                        <outlet property="humidityIcon" destination="row-f2-KTv" id="9Ly-gC-0FL"/>
                         <outlet property="humidityLabel" destination="ea7-J9-dux" id="8FR-hC-bTA"/>
-                        <outlet property="humidityName" destination="9cg-ae-a2e" id="fCw-OU-4yl"/>
-                        <outlet property="rainLabel" destination="6z4-cJ-Ndl" id="4bD-F1-c4B"/>
-                        <outlet property="rainName" destination="FCe-6G-Xsm" id="7nY-qy-QIC"/>
                         <outlet property="temperatureLabel" destination="hy1-2e-Qps" id="ONp-Le-yt6"/>
                         <outlet property="weatherDescImage" destination="UI4-Ez-j0S" id="uJZ-0N-5eU"/>
                         <outlet property="weatherLabel" destination="9QV-ZX-H2u" id="GrE-my-q2H"/>
+                        <outlet property="windIcon" destination="N6M-M8-KT6" id="5bZ-Mu-gAj"/>
                         <outlet property="windLabel" destination="LYO-PJ-wGD" id="MRg-Um-ZWX"/>
-                        <outlet property="windName" destination="V3c-Am-RFw" id="ttd-Sd-SNn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="311"/>
+            <point key="canvasLocation" x="304.5" y="310.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cloudCoverWhite" width="60" height="60"/>
         <image name="greenHills" width="4000" height="2248"/>
+        <image name="humidityWhite" width="60" height="60"/>
+        <image name="windWhite" width="60" height="60"/>
     </resources>
 </document>

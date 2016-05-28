@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 
 class ViewController: UIViewController,
-    WeatherGetterDelegate, CLLocationManagerDelegate,
+    WeatherGetterDelegate, ForecastGetterDelegate, CLLocationManagerDelegate,
     UITextFieldDelegate
 {
     @IBOutlet weak var cityLabel: UILabel!
@@ -18,21 +18,22 @@ class ViewController: UIViewController,
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cloudCoverLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
-    @IBOutlet weak var rainLabel: UILabel!
+
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var getLocationWeatherButton: UIButton!
     @IBOutlet weak var getCityWeatherButton: UIButton!
     @IBOutlet weak var weatherDescImage: UIImageView!
     
-    @IBOutlet weak var cloudCoverName: UILabel!
-    @IBOutlet weak var windName: UILabel!
-    @IBOutlet weak var rainName: UILabel!
-    @IBOutlet weak var humidityName: UILabel!
+    @IBOutlet weak var cloudCoverIcon: UIImageView!
+    @IBOutlet weak var windIcon: UIImageView!
+    @IBOutlet weak var humidityIcon: UIImageView!
+
     
     
     let locationManager = CLLocationManager()
     var weather: WeatherGetter!
+    var fullForecast: ForecastGetter!
     
     
     // MARK: -
@@ -40,6 +41,7 @@ class ViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         weather = WeatherGetter(delegate: self)
+        fullForecast = ForecastGetter(delegate: self)
         
         // Initialize UI
         // -------------
@@ -48,10 +50,9 @@ class ViewController: UIViewController,
         temperatureLabel.text = ""
         cloudCoverLabel.text = ""
         windLabel.text = ""
-        rainLabel.text = ""
         humidityLabel.text = ""
         cityTextField.text = ""
-        cityTextField.placeholder = "Enter city name"
+        cityTextField.placeholder = "enter city name or zip"
         cityTextField.delegate = self
         cityTextField.enablesReturnKeyAutomatically = true
         getCityWeatherButton.enabled = false
@@ -77,8 +78,10 @@ class ViewController: UIViewController,
         setWeatherButtonStates(false)
         if Int(cityTextField.text!.urlEncoded) != nil {
             weather.getWeatherByZip(cityTextField.text!.urlEncoded)
+            fullForecast.getForecastByZip(cityTextField.text!.urlEncoded)
         } else {
-        weather.getWeatherByCity(cityTextField.text!.urlEncoded)
+            weather.getWeatherByCity(cityTextField.text!.urlEncoded)
+            fullForecast.getForecastByCity(cityTextField.text!.urlEncoded)
         }
     }
     
@@ -102,13 +105,6 @@ class ViewController: UIViewController,
             self.cloudCoverLabel.text = "\(weather.cloudCover)%"
             self.windLabel.text = "\(weather.windSpeed) m/s"
             
-            if let rain = weather.rainfallInLast3Hours {
-                self.rainLabel.text = "\(rain) mm"
-            }
-            else {
-                self.rainLabel.text = "None"
-            }
-            
             self.humidityLabel.text = "\(weather.humidity)%"
             self.getLocationWeatherButton.enabled = true
             self.getCityWeatherButton.enabled = self.cityTextField.text?.characters.count > 0
@@ -129,6 +125,57 @@ class ViewController: UIViewController,
         print("didNotGetWeather error: \(error)")
     }
     
+    // MARK: - ForecastGetterDelegate methods
+    // -----------------------------------
+    
+    func didGetForecast(fullForecast: Forecast) {
+        // This method is called asynchronously, which means it won't execute in the main queue.
+        // All UI code needs to execute in the main queue, which is why we're wrapping the code
+        // that updates all the labels in a dispatch_async() call.
+        dispatch_async(dispatch_get_main_queue()) {
+            
+            
+            
+            print(fullForecast.forecast[0].desc)
+            print(fullForecast.forecast[1].desc)
+            print(fullForecast.forecast[2].desc)
+            print(fullForecast.forecast[35].desc)
+            
+            
+            /*
+            self.cityLabel.text = weather.city
+            self.weatherLabel.text = weather.weatherDescription
+            self.temperatureLabel.text = "\(Int(round(weather.tempFahrenheit)))°F"
+            self.cloudCoverLabel.text = "\(weather.cloudCover)%"
+            self.windLabel.text = "\(weather.windSpeed) m/s"
+            
+            if let rain = weather.rainfallInLast3Hours {
+                self.rainLabel.text = "\(rain) mm"
+            }
+            else {
+                self.rainLabel.text = "None"
+            }
+            
+            self.humidityLabel.text = "\(weather.humidity)%"
+            self.getLocationWeatherButton.enabled = true
+            self.getCityWeatherButton.enabled = self.cityTextField.text?.characters.count > 0
+            self.weatherDescImage.image = UIImage(named: weather.weatherIconID)
+ */
+        }
+    }
+    
+    func didNotGetForecast(error: NSError) {
+        // This method is called asynchronously, which means it won't execute in the main queue.
+        // All UI code needs to execute in the main queue, which is why we're wrapping the call
+        // to showSimpleAlert(title:message:) in a dispatch_async() call.
+        dispatch_async(dispatch_get_main_queue()) {
+            self.showSimpleAlert(title: "Can't get the weather",
+                                 message: "The weather service isn't responding.")
+            self.getLocationWeatherButton.enabled = true
+            self.getCityWeatherButton.enabled = self.cityTextField.text?.characters.count > 0
+        }
+        print("didNotGetForecast error: \(error)")
+    }
     
     // MARK: - CLLocationManagerDelegate and related methods
     
@@ -242,13 +289,13 @@ class ViewController: UIViewController,
     
     func textFieldDidEndEditing(textField: UITextField) {
         
-        animateViewMoving(false, moveValue: 200)
+        animateViewMoving(false, moveValue: 190)
         toggleHideBottom(false)
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
         
-        animateViewMoving(true, moveValue: 200)
+        animateViewMoving(true, moveValue: 190)
         toggleHideBottom(true)
     }
     
@@ -287,13 +334,11 @@ class ViewController: UIViewController,
     
     func toggleHideBottom(hide: Bool) {
         
-        cloudCoverName.hidden = hide
+        cloudCoverIcon.hidden = hide
         cloudCoverLabel.hidden = hide
-        windName.hidden = hide
+        windIcon.hidden = hide
         windLabel.hidden = hide
-        rainName.hidden = hide
-        rainLabel.hidden = hide
-        humidityName.hidden = hide
+        humidityIcon.hidden = hide
         humidityLabel.hidden = hide
         getLocationWeatherButton.hidden = hide
     }
