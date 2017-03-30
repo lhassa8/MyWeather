@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,92 +18,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greenHills" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-nE-FzZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="yellowbackground" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-nE-FzZ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                </variation>
+                                <color key="backgroundColor" red="0.89803922176361084" green="0.29411765933036804" blue="0.24313725531101227" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UI4-Ez-j0S">
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UI4-Ez-j0S">
                                 <rect key="frame" x="200" y="40" width="200" height="175"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="UI4-Ez-j0S" secondAttribute="height" multiplier="8:7" id="Z1Q-ZE-IQm"/>
-                                </constraints>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-0p-jvO">
-                                <rect key="frame" x="230" y="69" width="140" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-pw-AKx">
-                                        <rect key="frame" x="48" y="0.0" width="44" height="35"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="48" y="0.0" width="44" height="40"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-ZX-H2u">
-                                        <rect key="frame" x="32" y="35" width="76" height="28"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="27" y="40" width="87" height="32"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="188" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-2e-Qps">
-                                        <rect key="frame" x="0.0" y="62" width="140" height="66"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="Mde-C8-ncO"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="72" width="140" height="69"/>
-                                        </variation>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="0tD-fu-HKY"/>
+                                    <constraint firstAttribute="width" constant="110" id="n2b-KA-vpy"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="0tD-fu-HKY"/>
+                                        <exclude reference="n2b-KA-vpy"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="42" height="37"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="109" y="382" width="200" height="190"/>
                                     <mask key="constraints">
-                                        <include reference="0tD-fu-HKY"/>
+                                        <include reference="n2b-KA-vpy"/>
                                     </mask>
                                 </variation>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGz-Qv-nrU">
-                                <rect key="frame" x="10" y="319" width="392" height="204"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uGz-Qv-nrU">
+                                <rect key="frame" x="10" y="319" width="530" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82T-lq-b9M">
-                                        <rect key="frame" x="68" y="20" width="245" height="33"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82T-lq-b9M">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="60"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                        <size key="titleShadowOffset" width="1" height="1"/>
                                         <state key="normal" title="Get Weather For Current Location">
-                                            <color key="titleColor" red="0.97245593742051284" green="0.68078454899760044" blue="0.32457272810279003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="259" height="60"/>
+                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="259" height="36"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="259" height="0.0"/>
                                         </variation>
                                         <connections>
                                             <action selector="getWeatherForLocationButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4pS-ZX-WGn"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-Mk-TVx">
-                                        <rect key="frame" x="20" y="61" width="352" height="44"/>
+                                    <stackView opaque="NO" contentMode="center" ambiguous="YES" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="1q8-Mk-TVx">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="60"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloudCoverWhite" translatesAutoresizingMaskIntoConstraints="NO" id="bAN-8Q-k7Q">
-                                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="cloudCoverWhite" translatesAutoresizingMaskIntoConstraints="NO" id="bAN-8Q-k7Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9dQ-ot-2sD"/>
                                                     <constraint firstAttribute="width" constant="30" id="MoH-Ur-AnV"/>
@@ -115,6 +81,9 @@
                                                         <exclude reference="MoH-Ur-AnV"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=compact">
                                                     <mask key="constraints">
                                                         <include reference="9dQ-ot-2sD"/>
@@ -123,21 +92,23 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZII-uH-fNw">
-                                                <rect key="frame" x="58" y="22" width="50" height="25"/>
+                                                <rect key="frame" x="67" y="19" width="29" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="iTu-rc-iL8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="67" y="18" width="29" height="25"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="47" y="10" width="29" height="25"/>
+                                                    <rect key="frame" x="47" y="11" width="29" height="24"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="windWhite" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-M8-KT6">
-                                                <rect key="frame" x="140" y="20" width="30" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="windWhite" translatesAutoresizingMaskIntoConstraints="NO" id="N6M-M8-KT6">
+                                                <rect key="frame" x="103" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="NHK-fd-5Lo">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="30"/>
@@ -150,6 +121,9 @@
                                                         <exclude reference="bMF-P3-Xdg"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="103" y="0.0" width="60" height="60"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="92" y="7" width="30" height="30"/>
                                                     <mask key="constraints">
@@ -159,7 +133,7 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-PJ-wGD">
-                                                <rect key="frame" x="178" y="22" width="60" height="25"/>
+                                                <rect key="frame" x="170" y="19" width="29" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="60" id="Pbk-sg-kgU">
                                                         <variation key="heightClass=regular-widthClass=compact" constant="80"/>
@@ -168,14 +142,16 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="170" y="18" width="29" height="25"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="139" y="10" width="29" height="25"/>
+                                                    <rect key="frame" x="139" y="11" width="29" height="24"/>
                                                 </variation>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="humidityWhite" translatesAutoresizingMaskIntoConstraints="NO" id="row-f2-KTv">
-                                                <rect key="frame" x="263" y="22" width="30" height="30"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="humidityWhite" translatesAutoresizingMaskIntoConstraints="NO" id="row-f2-KTv">
+                                                <rect key="frame" x="205" y="0.0" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="VW1-78-zGg"/>
                                                     <constraint firstAttribute="height" constant="30" id="mQp-nB-4xp"/>
@@ -186,6 +162,9 @@
                                                         <exclude reference="mQp-nB-4xp"/>
                                                     </mask>
                                                 </variation>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="205" y="0.0" width="60" height="60"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
                                                     <rect key="frame" x="184" y="7" width="30" height="30"/>
                                                     <mask key="constraints">
@@ -195,17 +174,19 @@
                                                 </variation>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="188" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea7-J9-dux">
-                                                <rect key="frame" x="299" y="25" width="50" height="25"/>
+                                                <rect key="frame" x="272" y="19" width="29" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="45" id="fDp-ti-rim"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
-                                                <color key="shadowColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="272" y="18" width="29" height="25"/>
+                                                </variation>
                                                 <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                    <rect key="frame" x="231" y="10" width="29" height="25"/>
+                                                    <rect key="frame" x="231" y="11" width="29" height="24"/>
                                                 </variation>
                                             </label>
                                         </subviews>
@@ -217,64 +198,133 @@
                                                 <exclude reference="nS3-8Z-0BX"/>
                                             </mask>
                                         </variation>
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="259" y="0.0" width="301" height="60"/>
+                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="36" width="259" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="259" height="44"/>
                                             <mask key="constraints">
                                                 <include reference="nS3-8Z-0BX"/>
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name or Zipcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-St-1Z0">
-                                        <rect key="frame" x="94" y="113" width="209" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter City Name or Zipcode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGp-St-1Z0">
+                                        <rect key="frame" x="309" y="0.0" width="222" height="60"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="560" y="0.0" width="222" height="60"/>
+                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="80" width="259" height="30"/>
+                                            <rect key="frame" x="0.0" y="52" width="259" height="30"/>
                                         </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-UV-g6a">
-                                        <rect key="frame" x="94" y="151" width="204" height="33"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-UV-g6a">
+                                        <rect key="frame" x="530" y="0.0" width="0.0" height="60"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                         <state key="normal" title="Get the weather for above city">
-                                            <color key="titleColor" red="0.91764705882352937" green="0.64313725490196083" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="781" y="0.0" width="232" height="60"/>
+                                        </variation>
                                         <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="110" width="259" height="36"/>
+                                            <rect key="frame" x="0.0" y="82" width="259" height="0.0"/>
                                         </variation>
                                         <connections>
                                             <action selector="getWeatherForCityButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCq-A3-hOe"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <variation key="heightClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="10" y="600" width="1013" height="60"/>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" alignment="fill" axis="vertical" misplaced="YES">
-                                    <rect key="frame" x="53" y="447" width="259" height="146"/>
+                                    <rect key="frame" x="71" y="634" width="259" height="82"/>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DDr-0p-jvO" userLabel="Primary Stack View">
+                                <rect key="frame" x="230" y="69" width="87" height="206"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-pw-AKx">
+                                        <rect key="frame" x="22" y="0.0" width="44" height="69"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9QV-ZX-H2u">
+                                        <rect key="frame" x="0.0" y="69" width="87" height="69"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="188" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-2e-Qps">
+                                        <rect key="frame" x="6" y="137" width="75" height="69"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="Mde-C8-ncO"/>
+                                            <constraint firstAttribute="height" constant="35" id="a7o-df-Sxu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="a7o-df-Sxu"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="a7o-df-Sxu"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="0tD-fu-HKY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0tD-fu-HKY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="10" y="20" width="100" height="90"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="166" y="68" width="87" height="120"/>
+                                    <mask key="constraints">
+                                        <include reference="0tD-fu-HKY"/>
+                                    </mask>
                                 </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uGz-Qv-nrU" secondAttribute="bottom" constant="30" id="50X-Ei-5tA"/>
-                            <constraint firstItem="DDr-0p-jvO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DeS-3z-jdp"/>
-                            <constraint firstItem="uGz-Qv-nrU" firstAttribute="top" secondItem="UI4-Ez-j0S" secondAttribute="bottom" constant="50" id="Dm9-j6-daD"/>
+                            <constraint firstItem="UI4-Ez-j0S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Q9-md-i0e"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uGz-Qv-nrU" secondAttribute="bottom" constant="35" id="50X-Ei-5tA"/>
                             <constraint firstItem="aZb-nE-FzZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GJv-L4-sff"/>
-                            <constraint firstItem="DDr-0p-jvO" firstAttribute="centerX" secondItem="UI4-Ez-j0S" secondAttribute="centerX" id="Mfd-Aq-oL8"/>
+                            <constraint firstItem="DDr-0p-jvO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="25" id="LO7-vr-PQw"/>
                             <constraint firstItem="aZb-nE-FzZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Mk4-L1-2Tv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UI4-Ez-j0S" secondAttribute="trailing" constant="20" id="TLc-lg-iWL"/>
                             <constraint firstAttribute="trailing" secondItem="aZb-nE-FzZ" secondAttribute="trailing" id="Wlb-HO-U7I"/>
-                            <constraint firstItem="UI4-Ez-j0S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bwP-YM-UYb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aZb-nE-FzZ" secondAttribute="bottom" id="eOz-wd-jIh"/>
-                            <constraint firstItem="UI4-Ez-j0S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hRb-28-OFk"/>
-                            <constraint firstItem="UI4-Ez-j0S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="hXp-40-mjf"/>
+                            <constraint firstItem="UI4-Ez-j0S" firstAttribute="top" secondItem="DDr-0p-jvO" secondAttribute="bottom" constant="130" id="fST-Er-EIr"/>
+                            <constraint firstItem="DDr-0p-jvO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s6k-mw-4rg"/>
                             <constraint firstItem="uGz-Qv-nrU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tOE-xv-67M"/>
-                            <constraint firstItem="DDr-0p-jvO" firstAttribute="centerY" secondItem="UI4-Ez-j0S" secondAttribute="centerY" id="yeI-nx-e41"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="GJv-L4-sff"/>
                                 <exclude reference="Mk4-L1-2Tv"/>
                                 <exclude reference="Wlb-HO-U7I"/>
-                                <exclude reference="DeS-3z-jdp"/>
-                                <exclude reference="Dm9-j6-daD"/>
+                                <exclude reference="0Q9-md-i0e"/>
+                                <exclude reference="fST-Er-EIr"/>
+                                <exclude reference="LO7-vr-PQw"/>
+                                <exclude reference="s6k-mw-4rg"/>
                                 <exclude reference="tOE-xv-67M"/>
                                 <exclude reference="50X-Ei-5tA"/>
                                 <exclude reference="eOz-wd-jIh"/>
@@ -285,8 +335,10 @@
                                 <include reference="GJv-L4-sff"/>
                                 <include reference="Mk4-L1-2Tv"/>
                                 <include reference="Wlb-HO-U7I"/>
-                                <include reference="DeS-3z-jdp"/>
-                                <exclude reference="Dm9-j6-daD"/>
+                                <include reference="0Q9-md-i0e"/>
+                                <include reference="fST-Er-EIr"/>
+                                <include reference="LO7-vr-PQw"/>
+                                <include reference="s6k-mw-4rg"/>
                                 <include reference="tOE-xv-67M"/>
                                 <include reference="50X-Ei-5tA"/>
                                 <include reference="eOz-wd-jIh"/>
@@ -311,13 +363,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="310.5"/>
+            <point key="canvasLocation" x="260" y="273"/>
         </scene>
     </scenes>
     <resources>
         <image name="cloudCoverWhite" width="60" height="60"/>
-        <image name="greenHills" width="4000" height="2248"/>
         <image name="humidityWhite" width="60" height="60"/>
         <image name="windWhite" width="60" height="60"/>
+        <image name="yellowbackground" width="1202" height="1602"/>
     </resources>
 </document>

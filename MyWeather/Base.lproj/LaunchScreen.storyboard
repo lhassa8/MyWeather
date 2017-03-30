@@ -16,7 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellowbackground" translatesAutoresizingMaskIntoConstraints="NO" id="k90-BA-7it">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="audible weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5x-ja-5fE">
+                                <rect key="frame" x="183" y="83" width="235" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="k90-BA-7it" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="57A-S2-9mn"/>
+                            <constraint firstItem="k5x-ja-5fE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="63" id="N22-e6-RL4"/>
+                            <constraint firstItem="k90-BA-7it" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="R3C-ub-gvA"/>
+                            <constraint firstAttribute="trailing" secondItem="k90-BA-7it" secondAttribute="trailing" id="V46-h2-3bp"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="k90-BA-7it" secondAttribute="bottom" id="nyt-LA-azN"/>
+                            <constraint firstItem="k5x-ja-5fE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vE2-gU-JJw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +43,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="yellowbackground" width="1202" height="1602"/>
+    </resources>
 </document>

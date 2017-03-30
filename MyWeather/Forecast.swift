@@ -14,73 +14,31 @@ struct Forecast {
     
     init(forecastData: [String: AnyObject]) {
         
-        print(forecastData["list"]![2])
+
         for index in 0..<36 {
             let temp = forecastData["list"]![index]["main"]!!["temp"] as! Double
-            let time = forecastData["list"]![index]["dt"] as! NSTimeInterval
+            let high = forecastData["list"]![index]["main"]!!["temp_max"] as! Double
+            let low = forecastData["list"]![index]["main"]!!["temp_min"] as! Double
+            let time = forecastData["list"]![index]["dt"] as! TimeInterval
             let desc = forecastData["list"]![index]["weather"]!![0]["description"] as! String
             let icon = forecastData["list"]![index]["weather"]!![0]["icon"] as! String
             
-            let item = ForecastItem(time: time, temp: temp, icon: icon, desc: desc)
+            let item = ForecastItem(time: time, temp: temp, high: high, low: low, icon: icon, desc: desc)
             forecast.append(item)
             
-            // print("Temp: \(temp), Time: \(time), Desc: \(desc), Icon: \(icon)")
         }
         
-        //print(forecast)
-        
-        
-        
-        /*
-        dateAndTime = NSDate(timeIntervalSince1970: weatherData["dt"] as! NSTimeInterval)
-        city = weatherData["name"] as! String
-        
-        let coordDict = weatherData["coord"] as! [String: AnyObject]
-        longitude = coordDict["lon"] as! Double
-        latitude = coordDict["lat"] as! Double
-        
-        let weatherDict = weatherData["weather"]![0] as! [String: AnyObject]
-        weatherID = weatherDict["id"] as! Int
-        mainWeather = weatherDict["main"] as! String
-        weatherDescription = weatherDict["description"] as! String
-        weatherIconID = weatherDict["icon"] as! String
-        
-        let mainDict = weatherData["main"] as! [String: AnyObject]
-        temp = mainDict["temp"] as! Double
-        humidity = mainDict["humidity"] as! Int
-        pressure = mainDict["pressure"] as! Int
-        
-        cloudCover = weatherData["clouds"]!["all"] as! Int
-        
-        let windDict = weatherData["wind"] as! [String: AnyObject]
-        windSpeed = windDict["speed"] as! Double
-        windDirection = windDict["deg"] as? Double
-        
-        if weatherData["rain"] != nil {
-            let rainDict = weatherData["rain"] as! [String: AnyObject]
-            rainfallInLast3Hours = rainDict["3h"] as? Double
-        }
-        else {
-            rainfallInLast3Hours = nil
-        }
-        
-        let sysDict = weatherData["sys"] as! [String: AnyObject]
-        country = sysDict["country"] as! String
-        sunrise = NSDate(timeIntervalSince1970: sysDict["sunrise"] as! NSTimeInterval)
-        sunset = NSDate(timeIntervalSince1970:sysDict["sunset"] as! NSTimeInterval)
- */
     }
 
-    
-    
 }
 
-
 struct ForecastItem {
-    private var _time: NSDate
-    private var _temperature: Double
-    private var _icon: String
-    private var _description: String
+    fileprivate var _time: Date
+    fileprivate var _temperature: Double
+    fileprivate var _high: Double
+    fileprivate var _low: Double
+    fileprivate var _icon: String
+    fileprivate var _description: String
     
     var tempCelsius: Double {
         get {
@@ -93,7 +51,7 @@ struct ForecastItem {
         }
     }
     
-    var time: NSDate {
+    var time: Date {
         get {
             return _time
         }
@@ -102,6 +60,30 @@ struct ForecastItem {
     var temp: Double {
         get {
             return _temperature
+        }
+    }
+    
+    var highFar: Double {
+        get {
+            return (_high - 273.15) * 1.8 + 32
+        }
+    }
+    
+    var highCel: Double {
+        get {
+            return _high - 273.15
+        }
+    }
+    
+    var lowFar: Double {
+        get {
+            return (_low - 273.15) * 1.8 + 32
+        }
+    }
+    
+    var lowCel: Double {
+        get {
+            return _low - 273.15
         }
     }
     
@@ -117,14 +99,14 @@ struct ForecastItem {
         }
     }
     
-    init (time: AnyObject, temp: AnyObject, icon: String, desc: String) {
-        self._time = NSDate(timeIntervalSince1970: time as! NSTimeInterval)
+    init (time: AnyObject, temp: AnyObject, high: AnyObject, low: AnyObject, icon: String, desc: String) {
+        self._time = Date(timeIntervalSince1970: time as! TimeInterval)
         self._temperature = temp as! Double
+        self._high = high as! Double
+        self._low = low as! Double
         self._icon = icon
         self._description = desc
         
     }
-    
-
     
 }
